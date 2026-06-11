@@ -1,7 +1,14 @@
-// 1. テキストボックスDOM要素の取得し、console.logで表示
 const inputElement = document.getElementById("add-input");
-console.log(inputElement);
-
-// 2. ボタンDOM要素を取得し、console.logで表示
 const addButton = document.getElementById("add-btn");
-console.log(addButton);
+const todoList = document.getElementById("todo-list");
+
+// 4. 追加処理を addTodo 関数としてまとめる
+const addTodo = () => {
+  const li = document.createElement("li");
+  todoList.appendChild(li);
+  li.innerHTML = "ほげほげ";
+  li.className = "todo-li";
+};
+
+// ボタンがクリックされたら addTodo を実行する
+addButton.addEventListener("click", addTodo);
